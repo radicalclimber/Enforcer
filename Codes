@@ -1,0 +1,20 @@
+Here we collect all known commands to send to the enforcer and what the enforcer sends back.
+Codes are sent with BLE write request as byte value in the form 0x** to the handle 0x0008.
+If you want to try out you can use the "nRF Connect" app on android.
+Please be careful what you send to the enforcer. As we don't really know whats going on, wrong commands may brick your enforcer.
+
+Codes to send to the enforcer
+
+52	Rounding on
+53	Fast Mode
+72	Rounding off
+73	Slow Mode
+74	Start Recording (only works in fast mode)
+4c  followed by 31 or 32 or 33	start download of saved data. Slot 1/2/3
+6e	Confirm received packets. Used when downloading data from enforcer.
+7a  Calibrate the Enforcer
+64  Get calibration data form the Enforcer
+7a	calibrate
+59	programm (DANGER!)
+
+Answers comming back:
